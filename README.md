@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+# Study Points App 2024
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Text
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+Text 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+Text
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Folder structure
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- public - contains all the static files like images, fonts, etc.
+- src - contains all the source code of the app
+- context - contains reacts context hooks
+- features - contains all the features of the app like authentication, review, status, etc.
+- hooks - contains all the custom hooks
+- pages - contains all the pages of the app (pages should not contain any logic)
+- services - contains all the services of the app like api calls
+- styles - contains all the global styles
+- types - contains all the typescript and react-context types
+- ui - contains all the reusable components like buttons, inputs, etc.
+- utils - contains all the utility functions (helper functions)
+
+## npm packages
+
+- axios - for making api calls (or should we use fetch?)
+- react-router-dom - for routing
+- styled-components - for styling
+- typescript - for static type checking
+- date-fns - for date formatting
+- uuid - for generating unique ids
+- react-hot-toast - for toast notifications
+- react-icons - for icons
+- react-quill - for rich text editor
+- html-react-parser - for parsing html to react components
+- dompurify - for sanitizing html
