@@ -1,4 +1,3 @@
-import './App.css'
 import CsvToJsonConverter from './components/csvUploader/CsvUploader'
 
 function App() {
