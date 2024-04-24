@@ -1,10 +1,13 @@
+import './App.css'
+import CsvToJsonConverter from './components/csvUploader/CsvUploader'
+
 function App() {
 
-    return (
-        <>
-            Hello World
-        </>
-    )
+  return (
+    <>
+     <CsvToJsonConverter /> 
+    </>
+  )
 }
 
 export default App
