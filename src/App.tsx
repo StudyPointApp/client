@@ -1,10 +1,8 @@
-import CsvToJsonConverter from './components/csvUploader/CsvUploader'
-
 function App() {
 
   return (
     <>
-     <CsvToJsonConverter /> 
+        <h1>Study Points App</h1>
     </>
   )
 }
