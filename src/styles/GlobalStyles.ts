@@ -2,15 +2,15 @@ import {createGlobalStyle} from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     :root {
-        /* Indigo */
-        --color-brand-50: #eef2ff;
-        --color-brand-100: #e0e7ff;
-        --color-brand-200: #c7d2fe;
-        --color-brand-500: #6366f1;
-        --color-brand-600: #4f46e5;
-        --color-brand-700: #4338ca;
-        --color-brand-800: #3730a3;
-        --color-brand-900: #312e81;
+        /* Lime */
+        --color-brand-50: #f7fee7;
+        --color-brand-100: #ecfccb;
+        --color-brand-200: #d9f99d;
+        --color-brand-500: #84cc16;
+        --color-brand-600: #65a30d;
+        --color-brand-700: #4d7c0f;
+        --color-brand-800: #3f6212;
+        --color-brand-900: #365314;
 
         /* Grey */
         --color-grey-0: #fff;
@@ -25,14 +25,12 @@ const GlobalStyles = createGlobalStyle`
         --color-grey-800: #1f2937;
         --color-grey-900: #111827;
 
-        /* Blue */
-        --color-blue-100: #e0f2fe;
-        --color-blue-700: #0369a1;
-
-        /* Green */
-        --color-green-400: #4ade80;
-        --color-green-600: #16a34a;
-        --color-green-800: #166534;
+        /* Amber */
+        --color-amber-100: #fef3c7;
+        --color-amber-300: #fcd34d;
+        --color-amber-500: #f59e0b;
+        --color-amber-600: #d97706;
+        --color-amber-700: #b45309;
 
         /* Red */
         --color-red-100: #fee2e2;
@@ -116,6 +114,11 @@ const GlobalStyles = createGlobalStyle`
     select:focus {
         outline: 2px solid var(--color-brand-600);
         outline-offset: -1px;
+    }
+
+    button:hover {
+        color: var(--color-brand-600);
+        transition: color 0.3s;
     }
 
     button:has(svg) {
