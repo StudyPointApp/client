@@ -11,12 +11,12 @@ type JsonClassObject = {
     StudyPoints: string;
     Student: string;
     Group: string;
-    };
+};
 
 const CsvToJsonConverter: React.FC = () => {
   const [csvData, setCsvData] = useState<string | null>(null);
-  const [jsonData, setJsonData] = useState<any[] | null>(null);
-  const [newJsonData, setNewJsonData] = useState<{} | null>(null);
+  const [jsonData, setJsonData] = useState<{} | null>(null);
+  // const [newJsonData, setNewJsonData] = useState<{} | null>(null);
 
   const handleFileUpload = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -50,9 +50,12 @@ const CsvToJsonConverter: React.FC = () => {
 
       result.push(obj);
     }
+    const restructuredData = restructureData(result);
 
-    setJsonData(result);
-    setNewJsonData(restructureData(result));
+    console.log('JSON data:', result);
+    console.log('JSON changed to single object',restructuredData);
+    setJsonData(restructuredData);
+    // SEND TO SERVER FROM HERE
   };
 
   const restructureData = (jsonArray: JsonClassObject[]):{} => {
@@ -105,10 +108,8 @@ const CsvToJsonConverter: React.FC = () => {
 
       {jsonData && (
         <div>
-          <h3>JSON Data:</h3>
-          <pre>{JSON.stringify(jsonData, null, 2)}</pre>
+          <h2>You have succesfully uploaded your csv file!</h2>
           <hr />
-          <pre>{JSON.stringify(newJsonData, null, 2)}</pre>
         </div>
       )}
     </div>
