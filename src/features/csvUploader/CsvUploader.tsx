@@ -108,7 +108,7 @@ const CsvToJsonConverter: React.FC = () => {
 
       {jsonData && (
         <div>
-          <h2>You have succesfully uploaded your csv file!</h2>
+          <h2>You have successfully uploaded your csv file!</h2>
           <hr />
         </div>
       )}
