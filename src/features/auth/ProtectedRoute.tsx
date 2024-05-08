@@ -6,7 +6,7 @@ function ProtectedRoute({children}: {children: React.ReactNode}) {
     const navigate = useNavigate();
 
     // 1. Load the authenticated user
-    const isAuthenticated = false;
+    const isAuthenticated = true;
     const isLoading = false;
 
     // 2. If the user is not authenticated, redirect to the login page

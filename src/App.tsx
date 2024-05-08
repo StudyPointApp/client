@@ -1,7 +1,6 @@
 import AppLayout from "./layout/AppLayout";
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import ProtectedRoute from "./features/auth/ProtectedRoute";
-import Login from "./pages/Login";
 
 function App() {
 
@@ -20,7 +19,7 @@ function App() {
                   <Route path="activity" element={<h1>Activities</h1>}/>
                   <Route path="settings" element={<h1>Settings</h1>}/>
               </Route>
-              <Route path="login" element={<Login/>}/>
+              <Route path="login" element={<h1>Login</h1>}/>
               <Route path="*" element={<h1>Page Not Found</h1>}/>
           </Routes>
       </BrowserRouter>
