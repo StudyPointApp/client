@@ -1,6 +1,5 @@
 import AppLayout from "./layout/AppLayout";
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
-import ProtectedRoute from "./features/auth/ProtectedRoute";
 import Login from "./pages/Login";
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
   return (
       <BrowserRouter>
           <Routes>
-              <Route element={<ProtectedRoute><AppLayout/></ProtectedRoute>}>
+              <Route element={<AppLayout/>}>
                   <Route index element={<Navigate replace to='dashboard'/>}/>
                   <Route path="dashboard" element={<h1>Dashboard</h1>}/>
                   {/* admin */}
