@@ -17,13 +17,13 @@ const Error = styled.span`
       color: var(--color-red-700);
     `;
 
-interface FormRowVerticalProps {
+interface FormRowProps {
     label?: string;
     error?: string;
     children: React.ReactElement;
 }
 
-function FormRowVertical({ label, error, children }: FormRowVerticalProps) {
+function FormRow({ label, error, children }: FormRowProps) {
     return (
         <StyledFormRow>
             {label && <Label htmlFor={children.props.id}>{label}</Label>}
@@ -33,4 +33,4 @@ function FormRowVertical({ label, error, children }: FormRowVerticalProps) {
     );
 }
 
-export default FormRowVertical;
+export default FormRow;
