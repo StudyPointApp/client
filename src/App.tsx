@@ -6,7 +6,6 @@ import ProtectedRoute from "./features/auth/ProtectedRoute";
 
 function App() {
 
-
     return (
         <>
             <BrowserRouter>
