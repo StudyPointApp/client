@@ -1,27 +1,16 @@
 import AppLayout from "./layout/AppLayout";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import Login from "./pages/Login";
-import {toast} from "react-hot-toast";
 import ToasterBox from "./ui/ToasterBox";
+import ProtectedRoute from "./features/auth/ProtectedRoute";
 
 function App() {
-
-    // This function is used to show a toast notification. It uses the `toast` function from the `react-hot-toast` library
-    // delete this function
-    const notify = () => toast("Here is your toast message", {
-        icon: '🔥',
-        style: {
-            borderRadius: '10px',
-            background: '#333',
-            color: '#fff',
-        }
-    });
 
     return (
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route element={<AppLayout/>}>
+                    <Route element={<ProtectedRoute><AppLayout/></ProtectedRoute>}>
                         <Route index element={<Navigate replace to='dashboard'/>}/>
                         <Route path="dashboard" element={<h1>Dashboard</h1>}/>
                         {/* admin */}
@@ -37,7 +26,6 @@ function App() {
                     <Route path="*" element={<h1>Page Not Found</h1>}/>
                 </Routes>
             </BrowserRouter>
-            <button onClick={notify}>Notify</button> // to be deleted
             <ToasterBox/>
         </>
     )
